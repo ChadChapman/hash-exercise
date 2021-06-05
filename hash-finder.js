@@ -38,7 +38,6 @@ const bruteForce = (hashedValue, charCountArg) => {
         // so now move along the array of possibilities
         humanReadableString += letters[loopCount-1]
     }
-    console.log({seedString})
     // make the comparison for this result to verify the hashed value
     if (hashedValue !== hashFunction.hash(seedString)) {
         // notify the user it wasn't a match, then exit(1) or similar
