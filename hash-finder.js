@@ -32,6 +32,7 @@ const bruteForce = (hashedValue, charCountArg) => {
         // make the comparison and keep going through each char possibility in `letters`
         while (hashedValue > hashFunction.hash(attemptStringFactory(humanReadableString, loopCount, charCountArg)) && loopCount < letters.length) {
             loopCount++;
+            // todo - not wild about this duplicate call
             seedString = attemptStringFactory(humanReadableString, loopCount, charCountArg)
         }
         // so now move along the array of possibilities
